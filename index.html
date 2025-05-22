@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meditation Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Meditation Timer</h1>
+        
+        <div class="timer-display">
+            <div id="time">00:00</div>
+        </div>
+        
+        <div class="timer-settings">
+            <div class="setting">
+                <label for="totalTime">Total Meditation Time (minutes):</label>
+                <input type="number" id="totalTime" min="1" max="120" value="10">
+            </div>
+            
+            <div class="setting">
+                <label for="intervalTime">Interval Time (minutes):</label>
+                <input type="number" id="intervalTime" min="1" max="30" value="5">
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="pauseBtn">Pause</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+    
+    <!-- Audio elements for sounds -->
+    <audio id="intervalSound" src="sounds/interval-gong.mp3"></audio>
+    <audio id="endSound" src="sounds/end-gong.mp3"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
